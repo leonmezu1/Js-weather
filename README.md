@@ -3,7 +3,7 @@ Javascript  Weather web app
 
 ![sample](src/images/sample.png)
 
-## # JS-Weather-app [Live Link]()
+## # JS-Weather-app [Live Site](https://blissful-poitras-45cbeb.netlify.app/)
 
 ## Usage
 
