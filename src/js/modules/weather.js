@@ -9,7 +9,7 @@ const Weather = () => {
   const baseUrl = 'https://api.openweathermap.org/data/2.5/';
   const metricUnits = '&units=metric';
   const imperialUnits = '&units=imperial';
-  const apiKey = process.env.API_KEY;
+  const apiKey = `&appid=${process.env.API_KEY}`;
 
 
   const getWeatherQuery = async (cityQuery) => {
