@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="text/html">
+    <meta x-content-type-options="nosniff">
+    <meta http-equiv="Content-Type">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Weather app</title>
+  </head>
+  <body>
+    <div class="app-wrap">
+      <header>
+        <div class="autocomplete">
+          <input class="search-box" id="myInput" type="text" autocomplete="off" placeholder="Insert the city's name">
+        </div>
+      </header>
+      <main>
+        <div class="carded">
+          <div class="current">
+            <div class="weather-data">
+              <div class="location">
+                <div class="city">
+                  <div class="cityname" id="cityname">Popayan</div>
+                  <div class="country" id="countryname">CO</div>
+                </div>
+                <div class="date">Sunday, June 21th 2020</div>
+              </div>
+              <div class="weather">
+                <figure>
+                  <img src="https://image.flaticon.com/icons/svg/59/59744.svg" alt="svg">
+                  <figcaption class="description">Sunny</figcaption>
+                </figure>
+              </div>
+              <div class="temp">
+                <div class="main-temp">
+                  <span class="current-temp">15º</span>
+                  <div class="extra-temps">
+                    <div class="hi-low">
+                      <div class="hi" id="hi">Max. 25º</div>
+                      <div class="low" id="low">Min. 14º</div>
+                    </div>
+                    <span class="feels">Feels like 13 º</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="meteo">
+              <div class="wind">
+                <div class="head">Wind</div>
+                <div class="data">1.79 <span class="relative">m/s</span></div>
+              </div>
+              <div class="clouds">
+                <div class="head">Clouds</div>
+                <div class="data">1.79 <span class="relative">%</span></div>
+              </div>
+              <div class="humidity">
+                <div class="head">Humidity</div>
+                <div class="data">1.79 <span class="relative">%</span></div>
+              </div>
+              <div class="pressure">
+                <div class="head">Pressure</div>
+                <div class="data">1014 <span class="relative">hPa</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="js/index.bundle.js"></script>
+</html>

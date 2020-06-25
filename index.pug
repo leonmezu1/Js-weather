@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(content="text/html")
+    meta(x-content-type-options="nosniff")
+    meta(http-equiv="Content-Type")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,500;1,400;1,500&display=swap")
+    title Weather app
+  body
+    .app-wrap
+      header
+        .autocomplete
+          input#myInput(type="text" autocomplete="off" class="search-box" placeholder="Insert the city's name")
+      main
+        section.location
+          .city Popayan
+          .date Sunday, June 21th
+        .current
+          .temp 22
+           span ºC
+          .weather Sunny
+          .hi-low 22 -16
+  script(src="js/index.bundle.js")
