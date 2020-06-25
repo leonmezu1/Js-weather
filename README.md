@@ -1,7 +1,7 @@
 # Js-weather
 Javascript  Weather web app
 
-![sample](src/img/sample.png)
+![sample](src/images/sample.png)
 
 ## # JS-Weather-app [Live Link]()
 
