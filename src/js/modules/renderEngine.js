@@ -1,3 +1,5 @@
+import * as Ls from './localStorage';
+
 const dateFormat = require('dateformat');
 
 const displayCurrentWeather = (weather) => {
@@ -29,7 +31,12 @@ const displayCurrentWeather = (weather) => {
   feelsLike.innerText = `Feels like ${weather.main.feels_like}°`;
 
   const wind = document.querySelector('.wind .data');
-  wind.innerText = `${weather.wind.speed} m/s`;
+
+  if (Ls.getSystemLS().system === 'metric') {
+    wind.innerText = `${weather.wind.speed} mt/s`;
+  } else {
+    wind.innerText = `${weather.wind.speed} miles/h`;
+  }
 
   const clouds = document.querySelector('.clouds .data');
   clouds.innerText = `${weather.clouds.all}%`;
