@@ -4,10 +4,8 @@
 import '../styles/styles.scss';
 
 const queryBox = document.getElementById('myInput');
-const googleKey = 'AIzaSyCzRFGSBJD_PqLLKaen5PzoyhCdjmV4R9M';
 
 const queryURL = (query, system) => {
-  const key = 'b9d786489eff73f5cec702d51ff7bba6';
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${key}&units=${system}`;
   return url;
 };
