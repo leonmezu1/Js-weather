@@ -13,7 +13,7 @@ const getSystemLS = () => {
 };
 
 const loadCities = async () => {
-  const data = await fetch('../src/data/citiesOfTheWorld.txt')
+  const data = await fetch('../dist/data/citiesOfTheWorld.txt')
     .then((res) => res.text())
     .then((data) => data.split(','));
   autocomplete(queryBox, data);

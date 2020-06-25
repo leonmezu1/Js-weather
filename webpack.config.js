@@ -1,4 +1,5 @@
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -60,4 +61,7 @@ module.exports = {
     compress: true,
     hot: true,
   },
+  plugins: [
+    new Dotenv(),
+  ],
 };
