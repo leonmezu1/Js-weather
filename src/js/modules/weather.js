@@ -1,8 +1,9 @@
 // eslint-disable-next-line import/no-cycle
 import * as Ls from './localStorage';
 import fetchResponse from './fetchApi';
+// eslint-disable-next-line import/no-cycle
 import displayCurrentWeather from './renderEngine';
-
+// eslint-disable-next-line import/no-unresolved, import/no-extraneous-dependencies
 require('dotenv').config();
 
 const Weather = () => {

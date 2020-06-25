@@ -1,5 +1,6 @@
+// eslint-disable-next-line import/no-cycle
 import * as Ls from './localStorage';
-
+// eslint-disable-next-line import/no-unresolved, import/no-extraneous-dependencies
 const dateFormat = require('dateformat');
 
 const displayCurrentWeather = (weather) => {

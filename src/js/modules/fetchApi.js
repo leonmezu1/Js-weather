@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved, import/no-extraneous-dependencies
 import Swal from 'sweetalert2';
 
 const fetchResponse = async (url) => {
