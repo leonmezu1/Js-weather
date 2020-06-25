@@ -1,5 +1,5 @@
-/* eslint-disable func-names */
-/* eslint-disable consistent-return */
+/* /* eslint-disable func-names
+/* eslint-disable consistent-return
 
 import '../styles/styles.scss';
 
@@ -14,7 +14,9 @@ const queryURL = (query, system) => {
 
 
 function dateBuilder(d) {
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const months =
+  ['January', 'February', 'March', 'April', 'May',
+  'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
   const day = days[d.getDay()];
@@ -51,7 +53,7 @@ const getWeather = async (location, system) => {
     displayResults(data);
     const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0].icon}.svg`;
 
-    console.log(data);
+  /*     console.log(data);
   }).catch(() => {
   });
 };
@@ -133,21 +135,19 @@ async function reverseGeocoding(position) {
   const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=${googleKey}`;
   const response = await fetch(url);
   const data = await response.json();
-  const indexNew = data.results[0].address_components.findIndex(addressComponent => addressComponent.types.includes('administrative_area_level_2'));
+  const indexNew = data.results[0].address_components.findIndex(addressComponent
+    => addressComponent.types.includes('administrative_area_level_2'));
   const cityName = data.results[0].address_components[indexNew].short_name;
-  const cityPlaceId = data.results[0].place_id;
+  /*   const cityPlaceId = data.results[0].place_id;
   getWeather(cityName, 'metric');
-  const url2 = 'https://maps.googleapis.com/maps/api/place/details/json?fields=photo&place_id=ChIJPVRqJxoDMI4RqnA_jgYiCj4&key=AIzaSyCzRFGSBJD_PqLLKaen5PzoyhCdjmV4R9M';
-  const response2 = await fetch(url2);
-  const data2 = await response2.json();
-  console.log(data2);
+/*   const url2 = 'https://maps.googleapis.com/maps/api/place/details/json?fields=photo&place_id=ChIJPVRqJxoDMI4RqnA_jgYiCj4&key=AIzaSyCzRFGSBJD_PqLLKaen5PzoyhCdjmV4R9M';
+ *//*   const response2 = await fetch(url2);
+/*   const data2 = await response2.json();
 }
 
 async function getWeatherAndInfo() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(reverseGeocoding);
-  } else {
-    alert('Geolocation is not supported by this browser.');
   }
 }
 
@@ -160,3 +160,4 @@ const loadCities = async () => {
 
 document.addEventListener('DOMContentLoaded', getWeatherAndInfo);
 document.addEventListener('DOMContentLoaded', loadCities);
+ */

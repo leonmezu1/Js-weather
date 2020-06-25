@@ -47,9 +47,11 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3",
     "date-fns": "^2.14.0",
     "dateformat": "^3.0.3",
     "net": "^1.0.2",
-    "node-geocoder": "^3.27.0"
+    "node-geocoder": "^3.27.0",
+    "sweetalert2": "^9.15.2"
   }
 }

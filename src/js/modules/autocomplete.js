@@ -1,11 +1,16 @@
+// eslint-disable-next-line import/no-cycle
+import Weather from './weather';
+
+const weather = Weather();
+
 const autocomplete = (inp, arr) => {
   let currentFocus;
-  const removeActive = (x) => {
+  const removeActive = x => {
     for (let i = 0; i < x.length; i += 1) {
       x[i].classList.remove('autocomplete-active');
     }
   };
-  const addActive = (x) => {
+  const addActive = x => {
     if (!x) return false;
     removeActive(x);
     if (currentFocus >= x.length) currentFocus = 0;
@@ -13,7 +18,7 @@ const autocomplete = (inp, arr) => {
     x[currentFocus].classList.add('autocomplete-active');
     return true;
   };
-  const closeAllLists = (elmnt) => {
+  const closeAllLists = elmnt => {
     const x = document.getElementsByClassName('autocomplete-items');
     for (let i = 0; i < x.length; i += 1) {
       if (elmnt !== x[i] && elmnt !== inp) {
@@ -40,6 +45,7 @@ const autocomplete = (inp, arr) => {
         b.addEventListener('click', (e) => {
           inp.value = e.target.getElementsByTagName('input')[0].value;
           closeAllLists();
+          weather.getWeatherQuery(inp.value);
         });
         a.appendChild(b);
       }
@@ -60,6 +66,7 @@ const autocomplete = (inp, arr) => {
       if (currentFocus > -1) {
         if (x) x[currentFocus].click();
       }
+      weather.getWeatherQuery(inp.value);
     }
   });
   document.addEventListener('click', (e) => {

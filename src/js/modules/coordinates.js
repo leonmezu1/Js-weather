@@ -5,11 +5,10 @@ const showPosition = (position) => {
   locatedWeather.getWeatherWithCoordinates(position.coords.latitude, position.coords.longitude);
 };
 
-const getLocation = (callback) => {
+const getLocation = () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   }
-  callback();
 };
 
 export default getLocation;

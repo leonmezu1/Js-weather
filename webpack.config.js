@@ -5,7 +5,7 @@ module.exports = {
     index: './src/js/index.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'js/[name].bundle.js',
   },
@@ -51,17 +51,6 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'common',
-          chunks: 'all',
-        },
-      },
-    },
   },
   devServer: {
     host: 'localhost',

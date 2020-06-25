@@ -1,16 +1,16 @@
+// eslint-disable-next-line import/no-cycle
 import autocomplete from './autocomplete';
 
 const queryBox = document.getElementById('myInput');
-
-const getSystemLS = () => {
-  const system = localStorage.getItem('weatherUnitSystem') === null ? { system: 'metric' } : JSON.parse(localStorage.getItem('weatherUnitSystem'));
-  return system;
-};
 
 const setSystemLS = (unit) => {
   localStorage.setItem('weatherUnitSystem', JSON.stringify(unit));
 };
 
+const getSystemLS = () => {
+  const system = localStorage.getItem('weatherUnitSystem') === null ? { system: 'metric' } && setSystemLS({ system: 'metric' }) : JSON.parse(localStorage.getItem('weatherUnitSystem'));
+  return system;
+};
 
 const loadCities = async () => {
   const data = await fetch('../src/data/citiesOfTheWorld.txt')
@@ -19,4 +19,6 @@ const loadCities = async () => {
   autocomplete(queryBox, data);
 };
 
-export { getSystemLS, setSystemLS, loadCities };
+export {
+  getSystemLS, setSystemLS, loadCities, queryBox,
+};
